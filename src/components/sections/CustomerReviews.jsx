@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000/api/reviews";
+const API_URL = "https://aarambh-sweets.onrender.com/api/reviews";
 
 function CustomerReviews() {
   const [reviews, setReviews] = useState([]);

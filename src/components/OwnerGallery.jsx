@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://aarambh-sweets.onrender.com";
 
 function OwnerGallery() {
   const [token, setToken] = useState("");

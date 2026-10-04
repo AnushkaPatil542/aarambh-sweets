@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000/api/gallery";
+const API_URL = "https://aarambh-sweets.onrender.com/api/gallery";
 
 function Gallery() {
   const [photos, setPhotos] = useState([]);
