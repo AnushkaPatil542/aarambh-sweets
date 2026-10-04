@@ -1,4 +1,3 @@
-
 function OurStory() {
   return (
     <section className="our-story" id="story">
@@ -7,6 +6,7 @@ function OurStory() {
         <img
           src="/pedha.jpg"
           alt="आरंभ स्वीट्स"
+          loading="lazy"
         />
       </div>
 
@@ -42,7 +42,6 @@ function OurStory() {
           हा आपल्या कुटुंबातीलच एक भाग आहे.
         </p>
 
-
       </div>
 
     </section>
@@ -50,4 +49,3 @@ function OurStory() {
 }
 
 export default OurStory;
-

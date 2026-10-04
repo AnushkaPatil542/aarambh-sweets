@@ -1,4 +1,3 @@
-
 function WhyAarambh() {
   return (
     <section className="why-aarambh">
@@ -20,7 +19,7 @@ function WhyAarambh() {
 
       <div className="features">
 
-        <div className="feature-card">
+        <article className="feature-card">
           <div className="feature-icon">🌿</div>
 
           <h3>100% नैसर्गिक</h3>
@@ -29,9 +28,9 @@ function WhyAarambh() {
             नैसर्गिक आणि शुद्ध घटकांचा वापर करून
             तयार केलेले पदार्थ.
           </p>
-        </div>
+        </article>
 
-        <div className="feature-card">
+        <article className="feature-card">
           <div className="feature-icon">🚫</div>
 
           <h3>प्रिझर्व्हेटिव्ह नाही</h3>
@@ -40,9 +39,9 @@ function WhyAarambh() {
             पदार्थांची नैसर्गिक चव आणि गुणवत्ता
             जपण्यासाठी कोणतेही प्रिझर्व्हेटिव्ह नाही.
           </p>
-        </div>
+        </article>
 
-        <div className="feature-card">
+        <article className="feature-card">
           <div className="feature-icon">🎨</div>
 
           <h3>कृत्रिम रंग नाही</h3>
@@ -51,9 +50,9 @@ function WhyAarambh() {
             आकर्षक दिसण्यासाठी कृत्रिम रंगांचा
             वापर केला जात नाही.
           </p>
-        </div>
+        </article>
 
-        <div className="feature-card">
+        <article className="feature-card">
           <div className="feature-icon">🏠</div>
 
           <h3>घरगुती पद्धतीने निर्मिती</h3>
@@ -62,7 +61,7 @@ function WhyAarambh() {
             घरच्या घरी प्रेमाने आणि काळजीपूर्वक
             तयार केलेले दुग्धजन्य पदार्थ.
           </p>
-        </div>
+        </article>
 
       </div>
 
@@ -71,4 +70,3 @@ function WhyAarambh() {
 }
 
 export default WhyAarambh;
-

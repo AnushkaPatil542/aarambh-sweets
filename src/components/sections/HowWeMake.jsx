@@ -1,4 +1,3 @@
-
 function HowWeMake() {
   return (
     <section className="how-we-make" id="process">
@@ -20,7 +19,7 @@ function HowWeMake() {
 
       <div className="process-grid">
 
-        <div className="process-card">
+        <article className="process-card">
           <div className="process-number">01</div>
           <div className="process-icon">🥛</div>
 
@@ -30,9 +29,9 @@ function HowWeMake() {
             ताज्या आणि चांगल्या गुणवत्तेच्या
             दुधापासून आमच्या पदार्थांची सुरुवात होते.
           </p>
-        </div>
+        </article>
 
-        <div className="process-card">
+        <article className="process-card">
           <div className="process-number">02</div>
           <div className="process-icon">🔥</div>
 
@@ -42,9 +41,9 @@ function HowWeMake() {
             योग्य पद्धतीने आणि संयमाने पदार्थ
             तयार केला जातो.
           </p>
-        </div>
+        </article>
 
-        <div className="process-card">
+        <article className="process-card">
           <div className="process-number">03</div>
           <div className="process-icon">🏠</div>
 
@@ -54,9 +53,9 @@ function HowWeMake() {
             पारंपरिक घरगुती पद्धतीने प्रत्येक
             पदार्थ प्रेमाने तयार केला जातो.
           </p>
-        </div>
+        </article>
 
-        <div className="process-card">
+        <article className="process-card">
           <div className="process-number">04</div>
           <div className="process-icon">❤️</div>
 
@@ -66,7 +65,7 @@ function HowWeMake() {
             शेवटी मिळते शुद्ध, ताजी आणि
             घरच्या चवीची खास अनुभूती.
           </p>
-        </div>
+        </article>
 
       </div>
 
@@ -75,4 +74,3 @@ function HowWeMake() {
 }
 
 export default HowWeMake;
-

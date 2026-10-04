@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 const API_URL = "http://localhost:5000/api/reviews";
@@ -64,18 +63,23 @@ function CustomerReviews() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "अभिप्राय पाठवता आला नाही.");
+        throw new Error(
+          data.message || "अभिप्राय पाठवता आला नाही."
+        );
       }
 
       setName("");
       setRating(0);
       setComment("");
-      setMessage("धन्यवाद! तुमचा अभिप्राय यशस्वीरीत्या नोंदवला गेला.");
+      setMessage(
+        "धन्यवाद! तुमचा अभिप्राय यशस्वीरीत्या नोंदवला गेला."
+      );
 
       await fetchReviews();
     } catch (err) {
       setError(
-        err.message || "काहीतरी चूक झाली. कृपया पुन्हा प्रयत्न करा."
+        err.message ||
+          "काहीतरी चूक झाली. कृपया पुन्हा प्रयत्न करा."
       );
     } finally {
       setSubmitting(false);
@@ -85,8 +89,10 @@ function CustomerReviews() {
   const averageRating =
     reviews.length > 0
       ? (
-          reviews.reduce((sum, review) => sum + Number(review.rating), 0) /
-          reviews.length
+          reviews.reduce(
+            (sum, review) => sum + Number(review.rating),
+            0
+          ) / reviews.length
         ).toFixed(1)
       : null;
 
@@ -110,7 +116,9 @@ function CustomerReviews() {
       {reviews.length > 0 && (
         <div className="reviews-summary">
           <span className="summary-stars">★</span>
+
           <strong>{averageRating} / 5</strong>
+
           <span>
             {reviews.length} ग्राहक अभिप्राय
           </span>
@@ -119,10 +127,14 @@ function CustomerReviews() {
 
       <div className="review-form-card">
         <h3>तुमचा अभिप्राय द्या</h3>
+
         <p>आमच्या मिठाईचा अनुभव कसा होता?</p>
 
         <form onSubmit={handleSubmit}>
-          <label htmlFor="review-name">तुमचे नाव</label>
+          <label htmlFor="review-name">
+            तुमचे नाव
+          </label>
+
           <input
             id="review-name"
             type="text"
@@ -133,8 +145,15 @@ function CustomerReviews() {
             required
           />
 
-          <label>तुमचे रेटिंग</label>
-          <div className="rating-picker" aria-label="रेटिंग निवडा">
+          <label htmlFor="review-rating">
+            तुमचे रेटिंग
+          </label>
+
+          <div
+            id="review-rating"
+            className="rating-picker"
+            aria-label="रेटिंग निवडा"
+          >
             {[1, 2, 3, 4, 5].map((star) => (
               <button
                 key={star}
@@ -151,12 +170,15 @@ function CustomerReviews() {
             ))}
           </div>
 
-          <label htmlFor="review-comment">तुमचा अनुभव</label>
+          <label htmlFor="review-comment">
+            तुमचा अनुभव
+          </label>
+
           <textarea
             id="review-comment"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            placeholder="तुमचा FeedBack येथे लिहा..."
+            placeholder="तुमचा अनुभव येथे लिहा..."
             maxLength={2000}
             rows={4}
             required
@@ -179,7 +201,7 @@ function CustomerReviews() {
             className="review-submit"
             disabled={submitting}
           >
-            {submitting ? "पाठवत आहे..." : "FeedBack पाठवा"}
+            {submitting ? "पाठवत आहे..." : "अभिप्राय पाठवा"}
           </button>
         </form>
       </div>
@@ -188,33 +210,44 @@ function CustomerReviews() {
         <h3>ग्राहकांचे अनुभव</h3>
 
         {loading ? (
-          <p className="reviews-empty">FeedBack लोड होत आहेत...</p>
+          <p className="reviews-empty">
+            अभिप्राय लोड होत आहेत...
+          </p>
         ) : reviews.length === 0 ? (
           <p className="reviews-empty">
-            अजून FeedBack उपलब्ध नाहीत. तुमचा अनुभव सर्वात आधी शेअर करा!
+            अजून अभिप्राय उपलब्ध नाहीत.
+            तुमचा अनुभव सर्वात आधी शेअर करा!
           </p>
         ) : (
           <div className="reviews-grid">
             {reviews.map((review) => (
-              <article className="review-card" key={review.id}>
+              <article
+                className="review-card"
+                key={review.id}
+              >
                 <div
                   className="review-stars"
                   aria-label={`${review.rating} पैकी ${review.rating} स्टार`}
                 >
                   {"★".repeat(Number(review.rating))}
+
                   <span className="empty-stars">
                     {"★".repeat(5 - Number(review.rating))}
                   </span>
                 </div>
 
-                <p className="review-text">{review.comment}</p>
+                <p className="review-text">
+                  {review.comment}
+                </p>
 
                 <p className="review-name">
                   — {review.customer_name}
                 </p>
 
                 <time className="review-date">
-                  {new Date(review.created_at).toLocaleDateString("mr-IN")}
+                  {new Date(
+                    review.created_at
+                  ).toLocaleDateString("mr-IN")}
                 </time>
               </article>
             ))}

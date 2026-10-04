@@ -1,4 +1,3 @@
-
 function Hero() {
   return (
     <section className="hero" id="home">
@@ -25,7 +24,7 @@ function Hero() {
 
         <div className="hero-buttons">
           <a
-            href="https://wa.me/9766106849"
+            href="https://wa.me/919766106849"
             target="_blank"
             rel="noreferrer"
             className="primary-btn"
@@ -47,4 +46,3 @@ function Hero() {
 }
 
 export default Hero;
-

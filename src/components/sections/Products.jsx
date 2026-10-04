@@ -1,4 +1,3 @@
-
 const products = [
   {
     id: "pedha",
@@ -81,29 +80,44 @@ function Products() {
       </div>
 
       <div className="product-grid">
-        {products.map((product) => (
-          <article className="product-card" key={product.id}>
-            <div className="product-image">
-              <img
-                src={product.image}
-                alt={product.alt}
-                loading="lazy"
-              />
-            </div>
+        {products.map((product) => {
+          const whatsappMessage = `नमस्कार, मला ${product.name} बद्दल माहिती हवी आहे. कृपया आजचा भाव आणि उपलब्धता कळवा.`;
 
-            <div className="product-content">
-              <p className="product-tag">{product.tag}</p>
+          return (
+            <article className="product-card" key={product.id}>
+              <div className="product-image">
+                <img
+                  src={product.image}
+                  alt={product.alt}
+                  loading="lazy"
+                />
+              </div>
 
-              <h3>{product.name}</h3>
+              <div className="product-content">
+                <p className="product-tag">{product.tag}</p>
 
-              <p>{product.description}</p>
+                <h3>{product.name}</h3>
 
-              <span className="product-availability">
-                {product.availability}
-              </span>
-            </div>
-          </article>
-        ))}
+                <p>{product.description}</p>
+
+                <span className="product-availability">
+                  {product.availability}
+                </span>
+
+                <a
+                  href={`https://wa.me/919766106849?text=${encodeURIComponent(
+                    whatsappMessage
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="product-btn"
+                >
+                  WhatsApp वर चौकशी करा
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

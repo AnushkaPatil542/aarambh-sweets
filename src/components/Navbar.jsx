@@ -1,11 +1,10 @@
-
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">
+      <a href="#home" className="logo">
         <span>आरंभ</span>
         <small>SWEETS</small>
-      </div>
+      </a>
 
       <div className="nav-links">
         <a href="#home">Home</a>
@@ -16,7 +15,7 @@ function Navbar() {
       </div>
 
       <a
-        href="https://wa.me/9766106849"
+        href="https://wa.me/919766106849"
         target="_blank"
         rel="noreferrer"
         className="whatsapp-btn"
@@ -28,4 +27,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

@@ -1,7 +1,6 @@
 function Contact() {
   return (
     <section className="contact" id="contact">
-
       <div className="contact-content">
 
         <div className="contact-heading">
@@ -27,7 +26,9 @@ function Contact() {
             <div>
               <h3>पत्ता</h3>
               <p>
-               📍 किर्लोस्करवाडी-बुर्ली रोड, बुर्ली (कॅनॉल जवळ)
+                किर्लोस्करवाडी-बुर्ली रोड, बुर्ली
+                <br />
+                (कॅनॉल जवळ)
               </p>
             </div>
           </div>
@@ -37,10 +38,7 @@ function Contact() {
 
             <div>
               <h3>फोन</h3>
-              <p>
-                9766106849
-                
-              </p>
+              <p>9766106849</p>
             </div>
           </div>
 
@@ -58,25 +56,23 @@ function Contact() {
         </div>
 
         <div className="contact-action">
-
           <p>
             🏠 आम्ही घरगुती पद्धतीने काम करतो.
+            <br />
             भेट देण्यापूर्वी कृपया फोन किंवा WhatsApp वर संपर्क करा.
           </p>
 
           <a
-            href="https://wa.me/9766106849"
+            href="https://wa.me/919766106849"
             target="_blank"
             rel="noreferrer"
             className="contact-btn"
           >
             💬 WhatsApp वर ऑर्डर करा
           </a>
-
         </div>
 
       </div>
-
     </section>
   );
 }

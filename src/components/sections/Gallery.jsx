@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 const API_URL = "http://localhost:5000/api/gallery";
@@ -69,9 +68,7 @@ function Gallery() {
         throw new Error(data.message || "फोटो अपलोड करता आला नाही.");
       }
 
-      setMessage(
-        "धन्यवाद! तुमचा फोटो मिळाला आहे."
-      );
+      setMessage("धन्यवाद! तुमचा फोटो मिळाला आहे.");
 
       setPhoto(null);
       setCaption("");
@@ -98,17 +95,21 @@ function Gallery() {
 
         <span>
           आरंभ स्वीट्ससोबतचे तुमचे खास क्षण आमच्यासोबत शेअर करा.
-          
         </span>
       </div>
 
       {/* Customer photo submission form */}
       <div className="gallery-upload">
         <h3>तुमचा फोटो शेअर करा</h3>
-        <p>फोटो निवडा आणि हवे असल्यास छोटीशी माहिती लिहा.</p>
+
+        <p>
+          फोटो निवडा आणि हवे असल्यास छोटीशी माहिती लिहा.
+        </p>
 
         <form onSubmit={handleSubmit}>
-          <label htmlFor="gallery-photo">तुमचा फोटो</label>
+          <label htmlFor="gallery-photo">
+            तुमचा फोटो
+          </label>
 
           <input
             id="gallery-photo"
@@ -146,7 +147,9 @@ function Gallery() {
           )}
 
           <button type="submit" disabled={uploading}>
-            {uploading ? "फोटो अपलोड होत आहे..." : "फोटो शेअर करा"}
+            {uploading
+              ? "फोटो अपलोड होत आहे..."
+              : "फोटो शेअर करा"}
           </button>
         </form>
       </div>
@@ -166,7 +169,10 @@ function Gallery() {
           <article className="gallery-item" key={item.id}>
             <img
               src={item.imageUrl}
-              alt={item.caption || "आरंभ स्वीट्स ग्राहकाचा फोटो"}
+              alt={
+                item.caption ||
+                "आरंभ स्वीट्स ग्राहकाचा फोटो"
+              }
               loading="lazy"
             />
 
