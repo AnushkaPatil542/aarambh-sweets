@@ -1,9 +1,12 @@
+
 function Navbar() {
   return (
     <nav className="navbar">
+      
       <a href="#home" className="logo">
         <span>आरंभ</span>
         <small>SWEETS</small>
+        <em>FSSAI Lic. No.: 21523087006104</em>
       </a>
 
       <div className="nav-links">
@@ -22,8 +25,10 @@ function Navbar() {
       >
         WhatsApp वर ऑर्डर करा
       </a>
+
     </nav>
   );
 }
 
 export default Navbar;
+
