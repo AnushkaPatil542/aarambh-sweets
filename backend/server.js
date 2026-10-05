@@ -182,12 +182,13 @@ app.post("/api/reviews", (req, res) => {
   `;
 
   db.query(sql, [name, stars, feedback], (err, result) => {
-    if (err) {
-      console.error("Error saving review:", err.message);
-      return res.status(500).json({
-        message: "Failed to save review",
-      });
-    }
+  if (err) {
+    console.error("REVIEW SAVE ERROR:", err);
+    return res.status(500).json({
+      message: "Failed to save review",
+      error: err.message,
+    });
+  }
 
     res.status(201).json({
       message: "Review submitted successfully!",
