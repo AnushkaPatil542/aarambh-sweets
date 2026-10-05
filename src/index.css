@@ -2271,4 +2271,12 @@ section > * {
   margin-top: 2px;
    opacity: 0.75;
     white-space: nowrap;
-   }
+  
+  }
+
+  .fssai-number-about {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 20px;
+  opacity: 0.8;
+}

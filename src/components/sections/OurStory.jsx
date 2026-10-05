@@ -1,3 +1,4 @@
+
 function OurStory() {
   return (
     <section className="our-story" id="story">
@@ -42,6 +43,10 @@ function OurStory() {
           हा आपल्या कुटुंबातीलच एक भाग आहे.
         </p>
 
+        <p className="fssai-number-about">
+          FSSAI Licence No.: 21523087006104
+        </p>
+
       </div>
 
     </section>
@@ -49,3 +54,4 @@ function OurStory() {
 }
 
 export default OurStory;
+
